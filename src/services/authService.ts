@@ -1,7 +1,7 @@
 export {};
 const { v4: uuid } = require('uuid');
 const Auth = require('../database/Auth');
-const crypto = require('crypto');
+const bcrypt = require('bcrypt');
 
 export interface IUser {
   id: number;
@@ -14,8 +14,7 @@ export interface IUser {
 }
 
 const getHashedPassword = (password: string) => {
-  const sha256 = crypto.createHash('sha256');
-  const hash = sha256.update(password).digest('base64');
+  const hash = bcrypt.hashSync(password, 8);
   return hash;
 };
 
@@ -39,4 +38,16 @@ const register = (user: IUser) => {
   }
 };
 
-module.exports = { register };
+const login = (user: { email: string; password: string }) => {
+  const { email, password } = user;
+
+  try {
+    const user = Auth.login({ email, password: password });
+
+    return user;
+  } catch (error) {
+    throw error;
+  }
+};
+
+module.exports = { register, login };

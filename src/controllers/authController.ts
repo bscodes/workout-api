@@ -36,4 +36,30 @@ const register = (req: Request, res: Response) => {
   }
 };
 
-module.exports = { register };
+const login = (req: Request, res: Response) => {
+  const { email, password } = req.body;
+
+  const user = {
+    email,
+    password,
+  };
+
+  if (!email || !password) {
+    res.status(400).send({
+      status: 'FAILED',
+      data: { error: 'All fields are required' },
+    });
+    return;
+  }
+
+  try {
+    const loggedInUser = authService.login(user);
+    res.send({ status: 'OK', data: loggedInUser });
+  } catch (error) {
+    res
+      .status(error?.status || 500)
+      .send({ status: 'FAILED', data: { error: error?.message || error } });
+  }
+};
+
+module.exports = { register, login };
