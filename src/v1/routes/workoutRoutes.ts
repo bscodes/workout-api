@@ -1,3 +1,4 @@
+export {};
 const express = require('express');
 const apicache = require('apicache');
 const workoutController = require('../../controllers/workoutController');

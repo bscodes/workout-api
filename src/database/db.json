@@ -108,5 +108,26 @@
       "createdAt": "6/20/2022, 6:40:06 AM",
       "updatedAt": "6/20/2022, 6:40:06 AM"
     }
+  ],
+  "users": [
+    {
+      "id": "4a3d9aaa-608c-49a7-a004-66305ad4ab50",
+      "name": "John Doe",
+      "email": "user@site.com",
+      "createdAt": "1/25/2022, 1:15:44 PM",
+      "updatedAt": "3/10/2022, 8:21:56 AM",
+      "displayName": "John Doe",
+      "password": "admin"
+    },
+    {
+      "email": "johnny@site.com",
+      "name": "Johnny",
+      "password": "WZRHGrsBESr8wYFZ9sx0tPURuZgG2lmzyvWpwXPKz8U=",
+      "confirmPassword": "12345",
+      "displayName": "Johnny",
+      "id": "3e33e3e4-800b-4aec-951b-a1881845e56b",
+      "createdAt": "6/26/2022, 12:54:29 AM",
+      "updatedAt": "6/26/2022, 12:54:29 AM"
+    }
   ]
 }
