@@ -1,0 +1,248 @@
+{
+	"info": {
+		"_postman_id": "1ee3ed3a-d93d-44c5-aa49-d1660f1aebc1",
+		"name": "workout",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19648269"
+	},
+	"item": [
+		{
+			"name": "create workout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjkzOWNhOGFiLWI1NjEtNGNkYS05YThmLWEzMWYwYjRkY2U3NiIsImlhdCI6MTY1NjI2MzEwMSwiZXhwIjoxNjU2MzQ5NTAxfQ.CL2EnGmWg8FZA1C9hUl-JGvmoHfThcZEymmlIGBeS2Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Tokea\",\n  \"mode\": \"fulltime\",\n  \"equipment\": [\n    \"rack\",\n    \"barbell\",\n    \"abmat\"\n  ],\n  \"exercises\": [\n    \"15 toes to bars\",\n    \"10 thrusters\",\n    \"30 abmat sit-ups\"\n  ],\n  \"trainerTips\": [\n    \"Split your toes to bars into two sets maximum\",\n    \"Go unbroken on the thrusters\",\n    \"Take the abmat sit-ups as a chance to normalize your breath\"\n  ]\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/workouts",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"workouts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Johnny\",\n    \"email\": \"kama@site.com\",\n    \"password\": \"12345\",\n    \"confirmPassword\":\"12345\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/auth/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"kama@site.com\",\n    \"password\": \"12345\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "workouts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjkzOWNhOGFiLWI1NjEtNGNkYS05YThmLWEzMWYwYjRkY2U3NiIsImlhdCI6MTY1NjI2MzEwMSwiZXhwIjoxNjU2MzQ5NTAxfQ.CL2EnGmWg8FZA1C9hUl-JGvmoHfThcZEymmlIGBeS2Y",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/v1/workouts",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"workouts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "workout",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjkzOWNhOGFiLWI1NjEtNGNkYS05YThmLWEzMWYwYjRkY2U3NiIsImlhdCI6MTY1NjI2MzEwMSwiZXhwIjoxNjU2MzQ5NTAxfQ.CL2EnGmWg8FZA1C9hUl-JGvmoHfThcZEymmlIGBeS2Y",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/v1/workouts/61dbae02-c147-4e28-863c-db7bd402b2d6",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"workouts",
+						"61dbae02-c147-4e28-863c-db7bd402b2d6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "workout",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjkzOWNhOGFiLWI1NjEtNGNkYS05YThmLWEzMWYwYjRkY2U3NiIsImlhdCI6MTY1NjI2MzEwMSwiZXhwIjoxNjU2MzQ5NTAxfQ.CL2EnGmWg8FZA1C9hUl-JGvmoHfThcZEymmlIGBeS2Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Tommy k\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/workouts/61dbae02-c147-4e28-863c-db7bd402b2d6",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"workouts",
+						"61dbae02-c147-4e28-863c-db7bd402b2d6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "workout",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjkzOWNhOGFiLWI1NjEtNGNkYS05YThmLWEzMWYwYjRkY2U3NiIsImlhdCI6MTY1NjI2MzEwMSwiZXhwIjoxNjU2MzQ5NTAxfQ.CL2EnGmWg8FZA1C9hUl-JGvmoHfThcZEymmlIGBeS2Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/workouts/61dbae02-c147-4e28-863c-db7bd402b2d6",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"workouts",
+						"61dbae02-c147-4e28-863c-db7bd402b2d6"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "authToken",
+			"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjkzOWNhOGFiLWI1NjEtNGNkYS05YThmLWEzMWYwYjRkY2U3NiIsImlhdCI6MTY1NjI2MzEwMSwiZXhwIjoxNjU2MzQ5NTAxfQ.CL2EnGmWg8FZA1C9hUl-JGvmoHfThcZEymmlIGBeS2Y"
+		}
+	]
+}
