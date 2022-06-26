@@ -1,7 +1,7 @@
+import { Response } from 'express';
+
 export {};
 const fs = require('fs');
-// The fs module enables interacting
-//with the file system in a way modeled on standard POSIX functions.
 
 const saveToDatabase = (DB: any) => {
   fs.writeFileSync('./src/database/db.json', JSON.stringify(DB, null, 2), {
@@ -9,4 +9,14 @@ const saveToDatabase = (DB: any) => {
   });
 };
 
-module.exports = { saveToDatabase };
+const checkUser = (req: any, res: Response) => {
+  if (!req.user) {
+    res.status(403).send({
+      status: 'FAILED',
+      data: { error: 'You must be logged in to access this resource' },
+    });
+    return;
+  }
+};
+
+module.exports = { saveToDatabase, checkUser };
