@@ -1,9 +1,14 @@
+import { json } from 'body-parser';
 import { Request, Response } from 'express';
+const { checkUser } = require('../database/utils');
 
 const workoutService = require('../services/workoutService');
 
-const getAllWorkouts = (req: Request, res: Response) => {
+const getAllWorkouts = (req: any, res: Response) => {
   const { mode } = req.query;
+
+  checkUser(req, res);
+
   try {
     const allWorkouts = workoutService.getAllWorkouts({ mode });
     res.send({ status: 'OK', data: allWorkouts });
@@ -18,6 +23,9 @@ const getOneWorkout = (req: Request, res: Response) => {
   const {
     params: { workoutId },
   } = req;
+
+  checkUser(req, res);
+
   if (!workoutId) {
     res.status(400).send({
       status: 'FAILED',
@@ -36,6 +44,7 @@ const getOneWorkout = (req: Request, res: Response) => {
 
 const createNewWorkout = (req: Request, res: Response) => {
   const { body } = req;
+  checkUser(req, res);
   if (
     !body.name ||
     !body.mode ||
@@ -74,6 +83,9 @@ const updateOneWorkout = (req: Request, res: Response) => {
     body,
     params: { workoutId },
   } = req;
+
+  checkUser(req, res);
+
   if (!workoutId) {
     res.status(400).send({
       status: 'FAILED',
@@ -94,6 +106,9 @@ const deleteOneWorkout = (req: Request, res: Response) => {
   const {
     params: { workoutId },
   } = req;
+
+  checkUser(req, res);
+
   if (!workoutId) {
     res.status(400).send({
       status: 'FAILED',
@@ -102,7 +117,12 @@ const deleteOneWorkout = (req: Request, res: Response) => {
   }
   try {
     workoutService.deleteOneWorkout(workoutId);
-    res.status(204).send({ status: 'OK' });
+    res.send({
+      status: 'OK',
+      data: {
+        message: 'Workout deleted successfully',
+      },
+    });
   } catch (error) {
     res
       .status(error?.status || 500)

@@ -1,70 +1,6 @@
 {
   "workouts": [
     {
-      "id": "61dbae02-c147-4e28-863c-db7bd402b2d6",
-      "name": "Tommy V",
-      "mode": "For Time",
-      "equipment": [
-        "barbell",
-        "rope"
-      ],
-      "exercises": [
-        "21 thrusters",
-        "12 rope climbs, 15 ft",
-        "15 thrusters",
-        "9 rope climbs, 15 ft",
-        "9 thrusters",
-        "6 rope climbs, 15 ft"
-      ],
-      "createdAt": "4/20/2022, 2:21:56 PM",
-      "updatedAt": "4/20/2022, 2:21:56 PM",
-      "trainerTips": [
-        "Split the 21 thrusters as needed",
-        "Try to do the 9 and 6 thrusters unbroken",
-        "RX Weights: 115lb/75lb"
-      ]
-    },
-    {
-      "id": "4a3d9aaa-608c-49a7-a004-66305ad4ab50",
-      "name": "Dead Push-Ups",
-      "mode": "AMRAP 10",
-      "equipment": [
-        "barbell"
-      ],
-      "exercises": [
-        "15 deadlifts",
-        "15 hand-release push-ups"
-      ],
-      "createdAt": "1/25/2022, 1:15:44 PM",
-      "updatedAt": "3/10/2022, 8:21:56 AM",
-      "trainerTips": [
-        "Deadlifts are meant to be light and fast",
-        "Try to aim for unbroken sets",
-        "RX Weights: 135lb/95lb"
-      ]
-    },
-    {
-      "id": "d8be2362-7b68-4ea4-a1f6-03f8bc4eede7",
-      "name": "Heavy DT",
-      "mode": "5 Rounds For Time",
-      "equipment": [
-        "barbell",
-        "rope"
-      ],
-      "exercises": [
-        "12 deadlifts",
-        "9 hang power cleans",
-        "6 push jerks"
-      ],
-      "createdAt": "11/20/2021, 5:39:07 PM",
-      "updatedAt": "11/20/2021, 5:39:07 PM",
-      "trainerTips": [
-        "Aim for unbroken push jerks",
-        "The first three rounds might feel terrible, but stick to it",
-        "RX Weights: 205lb/145lb"
-      ]
-    },
-    {
       "name": "Bizi",
       "mode": "fulltime",
       "equipment": [
@@ -107,6 +43,50 @@
       "id": "97da3222-b4bd-4059-8fc0-fab61cef0415",
       "createdAt": "6/20/2022, 6:40:06 AM",
       "updatedAt": "6/20/2022, 6:40:06 AM"
+    },
+    {
+      "name": "Loki",
+      "mode": "fulltime",
+      "equipment": [
+        "rack",
+        "barbell",
+        "abmat"
+      ],
+      "exercises": [
+        "15 toes to bars",
+        "10 thrusters",
+        "30 abmat sit-ups"
+      ],
+      "trainerTips": [
+        "Split your toes to bars into two sets maximum",
+        "Go unbroken on the thrusters",
+        "Take the abmat sit-ups as a chance to normalize your breath"
+      ],
+      "id": "102327d4-72fe-4020-9426-90f35a898849",
+      "createdAt": "6/26/2022, 5:24:41 PM",
+      "updatedAt": "6/26/2022, 5:24:41 PM"
     }
-  ]
+  ],
+  "users": [
+    {
+      "id": "4a3d9aaa-608c-49a7-a004-66305ad4ab50",
+      "name": "John Doe",
+      "email": "user@site.com",
+      "createdAt": "1/25/2022, 1:15:44 PM",
+      "updatedAt": "3/10/2022, 8:21:56 AM",
+      "displayName": "John Doe",
+      "password": "admin"
+    },
+    {
+      "email": "kama@site.com",
+      "name": "Johnny",
+      "password": "$2b$08$L1H7N7F.jqRPMM5qDZm2g.Bkq3q28bn25RRM8jFR2JHRP1TcqBGqm",
+      "confirmPassword": "12345",
+      "displayName": "Johnny",
+      "id": "939ca8ab-b561-4cda-9a8f-a31f0b4dce76",
+      "createdAt": "6/26/2022, 4:03:20 PM",
+      "updatedAt": "6/26/2022, 4:03:20 PM"
+    }
+  ],
+  "authTokens": {}
 }
